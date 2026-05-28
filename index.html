@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="邓州市城区五小幼儿园2026年秋季招生，快乐成长，专业呵护，欢迎报名！" />
+  <title>邓州市城区五小幼儿园 · 2026秋季招生</title>
+  <style>
+    /* ==================== 全局变量 ==================== */
+    :root {
+      --primary:   #FF6B9D;
+      --secondary: #FFB347;
+      --accent:    #7EC8E3;
+      --mint:      #A8E6CF;
+      --lavender:  #C9B1E8;
+      --bg:        #FFF9F0;
+      --text:      #4A3728;
+      --text-light:#7A6A5A;
+      --card-bg:   #FFFFFF;
+      --radius:    18px;
+      --shadow:    0 4px 20px rgba(0,0,0,.10);
+    }
+
+    /* ==================== 基础重置 ==================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ==================== 顶部彩带 ==================== */
+    .rainbow-bar {
+      height: 6px;
+      background: linear-gradient(90deg,#FF6B9D,#FFB347,#FFE66D,#A8E6CF,#7EC8E3,#C9B1E8,#FF6B9D);
+    }
+
+    /* ==================== 主视觉 HERO ==================== */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #FFE8F5 0%, #FFF3E0 50%, #E8F8FF 100%);
+      padding: 40px 20px 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255,107,157,.15) 40px, transparent 40px),
+        radial-gradient(circle at 90% 10%, rgba(255,179,71,.15) 50px, transparent 50px),
+        radial-gradient(circle at 80% 85%, rgba(126,200,227,.2) 60px, transparent 60px),
+        radial-gradient(circle at 5%  80%, rgba(201,177,232,.2) 45px, transparent 45px);
+      pointer-events: none;
+    }
+
+    /* 浮动气泡 */
+    .bubbles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: .3;
+      animation: float 6s ease-in-out infinite;
+    }
+    .bubble:nth-child(1){ width:30px;height:30px;background:var(--primary);  left:5%; top:15%;animation-delay:0s; }
+    .bubble:nth-child(2){ width:20px;height:20px;background:var(--secondary);right:8%;top:25%;animation-delay:1s; }
+    .bubble:nth-child(3){ width:25px;height:25px;background:var(--accent);   left:15%;bottom:20%;animation-delay:2s; }
+    .bubble:nth-child(4){ width:15px;height:15px;background:var(--mint);     right:15%;bottom:30%;animation-delay:3s; }
+    .bubble:nth-child(5){ width:35px;height:35px;background:var(--lavender); left:40%;top:8%; animation-delay:.5s; }
+    @keyframes float{
+      0%,100%{ transform:translateY(0) rotate(0deg); }
+      50%{ transform:translateY(-15px) rotate(10deg); }
+    }
+
+    .hero-logo {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg,var(--primary),var(--secondary));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px;
+      box-shadow: 0 6px 24px rgba(255,107,157,.4);
+      position: relative; z-index: 1;
+      animation: pop .6s cubic-bezier(.34,1.56,.64,1) both;
+    }
+    @keyframes pop{ from{transform:scale(0);opacity:0;} to{transform:scale(1);opacity:1;} }
+
+    .hero-name {
+      font-size: 28px; font-weight: 900;
+      background: linear-gradient(135deg,var(--primary),#FF8C42);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative; z-index: 1;
+      text-shadow: none;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .hero-slogan {
+      font-size: 15px; color: var(--text-light);
+      position: relative; z-index: 1;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .hero-slogan span {
+      display: inline-block;
+      background: var(--card-bg);
+      padding: 4px 14px;
+      border-radius: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      margin: 3px 4px;
+      font-size: 14px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .enroll-badge {
+      display: inline-block;
+      background: linear-gradient(135deg,var(--primary),#FF8C42);
+      color: #fff;
+      padding: 12px 36px;
+      border-radius: 50px;
+      font-size: 17px; font-weight: 700;
+      box-shadow: 0 6px 20px rgba(255,107,157,.45);
+      cursor: pointer;
+      position: relative; z-index: 1;
+      animation: pulse 2s ease-in-out infinite;
+      border: none;
+    }
+    @keyframes pulse{
+      0%,100%{ box-shadow:0 6px 20px rgba(255,107,157,.45); }
+      50%{ box-shadow:0 8px 30px rgba(255,107,157,.7); transform:scale(1.03); }
+    }
+
+    /* ==================== 通用卡片 ==================== */
+    .section {
+      padding: 32px 16px;
+    }
+    .section-title {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 20px; font-weight: 800;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .section-title .icon {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .section-title .line {
+      flex: 1; height: 2px;
+      background: linear-gradient(90deg,var(--primary) 0%,transparent 100%);
+      border-radius: 2px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    /* ==================== 环境图片 ==================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 12px;
+    }
+    .gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,.1);
+      aspect-ratio: 4/3;
+      position: relative;
+      background: #f0f0f0;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .3s;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item .label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent,rgba(0,0,0,.55));
+      color: #fff; font-size: 13px; font-weight: 600;
+      padding: 16px 10px 8px;
+    }
+    /* 占位背景（无图片时显示） */
+    .gallery-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg,#FFE8F5,#FFF3E0);
+    }
+    .gallery-placeholder .ph-icon { font-size: 36px; }
+    .gallery-placeholder .ph-text { font-size: 12px; color: var(--text-light); }
+
+    /* ==================== 理念 & 师资 ==================== */
+    .concept-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .concept-card {
+      border-radius: 14px; padding: 18px 14px;
+      text-align: center;
+    }
+    .concept-card .c-icon { font-size: 32px; margin-bottom: 8px; }
+    .concept-card .c-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .concept-card .c-desc { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+    .teacher-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px;
+      border-bottom: 1px solid #f5f0eb;
+    }
+    .teacher-row:last-child { border-bottom: none; }
+    .teacher-avatar {
+      width: 54px; height: 54px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; flex-shrink: 0;
+    }
+    .teacher-info .name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .teacher-info .desc { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+    /* ==================== 招生信息 ==================== */
+    .enroll-info-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      margin-bottom: 14px;
+    }
+    .info-card {
+      border-radius: 14px; padding: 16px 14px;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .info-card .i-label { font-size: 12px; font-weight: 600; opacity: .75; }
+    .info-card .i-value { font-size: 15px; font-weight: 800; }
+    .info-card .i-sub { font-size: 12px; opacity: .7; line-height: 1.5; }
+
+    .class-table { width: 100%; border-collapse: collapse; }
+    .class-table th, .class-table td {
+      padding: 10px 12px;
+      text-align: center;
+      font-size: 14px;
+      border: none;
+    }
+    .class-table thead tr {
+      background: linear-gradient(90deg,var(--primary),var(--secondary));
+      color: #fff; font-weight: 700;
+    }
+    .class-table thead th:first-child { border-radius: 10px 0 0 0; }
+    .class-table thead th:last-child  { border-radius: 0 10px 0 0; }
+    .class-table tbody tr:nth-child(odd)  { background: #FFF5F9; }
+    .class-table tbody tr:nth-child(even) { background: #FFFAF3; }
+    .class-table tbody tr:last-child td:first-child { border-radius: 0 0 0 10px; }
+    .class-table tbody tr:last-child td:last-child  { border-radius: 0 0 10px 0; }
+
+    /* ==================== 联系我们 ==================== */
+    .contact-list { padding: 6px 0; }
+    .contact-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 16px;
+      border-bottom: 1px solid #f5f0eb;
+    }
+    .contact-item:last-child { border-bottom: none; }
+    .contact-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .contact-text .ct-label { font-size: 12px; color: var(--text-light); margin-bottom: 2px; }
+    .contact-text .ct-value { font-size: 15px; font-weight: 700; }
+    .contact-text .ct-sub   { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+    .btn-call {
+      margin-left: auto;
+      background: linear-gradient(135deg,var(--mint),#5EC89A);
+      color: #fff; border: none; border-radius: 20px;
+      padding: 7px 16px; font-size: 13px; font-weight: 700;
+      cursor: pointer; white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(94,200,154,.4);
+    }
+
+    /* ==================== 报名区 ==================== */
+    .enroll-section {
+      padding: 0 16px 40px;
+      text-align: center;
+    }
+    .enroll-card {
+      background: linear-gradient(135deg,var(--primary) 0%,#FF8C42 100%);
+      border-radius: 24px;
+      padding: 32px 24px;
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(255,107,157,.4);
+      position: relative; overflow: hidden;
+    }
+    .enroll-card::before {
+      content: "🌟";
+      position: absolute; top: -10px; right: -10px;
+      font-size: 80px; opacity: .12;
+    }
+    .enroll-card .e-title { font-size: 22px; font-weight: 900; margin-bottom: 8px; }
+    .enroll-card .e-sub   { font-size: 14px; opacity: .9; margin-bottom: 24px; line-height: 1.7; }
+    .enroll-card .e-tips  { font-size: 12px; opacity: .75; margin-top: 14px; }
+
+    .btn-enroll {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary);
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-size: 17px; font-weight: 800;
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      cursor: pointer; border: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn-enroll:active { transform: scale(.96); box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+
+    /* ==================== 底部 ==================== */
+    .footer {
+      background: linear-gradient(135deg,#4A3728,#6B4A3A);
+      color: rgba(255,255,255,.8);
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 13px; line-height: 2;
+    }
+    .footer strong { color: #fff; }
+    .footer .f-icons { font-size: 24px; margin-bottom: 8px; letter-spacing: 4px; }
+
+    /* ==================== 公告条 ==================== */
+    .notice-bar {
+      background: linear-gradient(90deg,var(--secondary),#FFD700);
+      color: #4A3728;
+      padding: 10px 16px;
+      font-size: 13px; font-weight: 600;
+      display: flex; align-items: center; gap: 8px;
+      overflow: hidden;
+    }
+    .notice-bar .nb-icon { flex-shrink: 0; font-size: 16px; }
+    .notice-scroll {
+      flex: 1; overflow: hidden; white-space: nowrap;
+    }
+    .notice-scroll span {
+      display: inline-block;
+      animation: scroll-text 18s linear infinite;
+    }
+    @keyframes scroll-text{
+      0%   { transform: translateX(100vw); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* ==================== 返回顶部 ==================== */
+    .back-top {
+      position: fixed; bottom: 24px; right: 18px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--primary); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; box-shadow: 0 4px 14px rgba(255,107,157,.5);
+      cursor: pointer; opacity: 0; transition: opacity .3s;
+      z-index: 99;
+    }
+    .back-top.show { opacity: 1; }
+
+    /* ==================== 响应式 ==================== */
+    @media (max-width: 360px) {
+      .hero-name { font-size: 24px; }
+      .concept-grid, .enroll-info-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 顶部彩带 -->
+<div class="rainbow-bar"></div>
+
+<!-- 公告滚动条 -->
+<div class="notice-bar">
+  <span class="nb-icon">📢</span>
+  <div class="notice-scroll">
+    <span>🌟 2026秋季招生火热进行中！&ensp;名额有限，报名从速！&ensp;🎒 欢迎实地参观园区，预约电话：186-2560-7063 &ensp;🌸 让每个孩子在阳光中快乐成长！</span>
+  </div>
+</div>
+
+<!-- ======================== HERO ======================== -->
+<section class="hero">
+  <div class="bubbles">
+    <div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+  </div>
+  <div class="hero-logo">🌞</div>
+  <h1 class="hero-name">邓州市城区五小幼儿园</h1>
+  <p class="hero-slogan">
+    <span>🎨 快乐启蒙</span>
+    <span>🌱 健康成长</span>
+    <span>💛 用爱呵护</span>
+  </p>
+  <p style="font-size:14px;color:var(--text-light);margin-bottom:22px;line-height:1.8;">
+    专注0-6岁幼儿全面发展<br>让每个孩子在阳光下快乐成长
+  </p>
+  <a href="#enroll-section" class="enroll-badge">🎒 立即报名 →</a>
+</section>
+
+<!-- ======================== 园区环境 ======================== -->
+<section class="section">
+  <div class="section-title">
+    <div class="icon" style="background:#FFE8F5;">🏫</div>
+    <span>园区环境</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="carousel" style="position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);">
+    <div class="carousel-track" id="envTrack" style="display:flex;transition:transform .5s ease;touch-action:pan-y;">
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/playground1.jpg" alt="园区环境" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#FFE8F5,#FFF3E0);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>🌳</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>园区环境</div></div>'"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/playground2.jpg" alt="园区环境" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#E8F8FF,#F0FFF0);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>🎨</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>园区环境</div></div>'"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/playground3.jpg" alt="园区环境" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#FFF8FF,#F5E8FF);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>🏫</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>园区环境</div></div>'"></div>
+    </div>
+
+    <button onclick="moveEnv(-1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:none;background:rgba(255,255,255,.85);color:#4A3728;font-size:16px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.1);z-index:2;display:flex;align-items:center;justify-content:center;">‹</button>
+    <button onclick="moveEnv(1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:none;background:rgba(255,255,255,.85);color:#4A3728;font-size:16px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.1);z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
+
+    <div style="display:flex;justify-content:center;gap:6px;padding:10px 0;" id="envDots">
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--primary);transition:all .3s;"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#DDD;transition:all .3s;"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#DDD;transition:all .3s;"></span>
+    </div>
+  </div>
+</section>
+
+<!-- 园区环境轮播脚本 -->
+<script>
+let envSlide = 0;
+const envTotal = 3;
+const envTrack = document.getElementById('envTrack');
+const envDots = document.getElementById('envDots').children;
+function moveEnv(dir) {
+  envSlide = (envSlide + dir + envTotal) % envTotal;
+  envTrack.style.transform = 'translateX(-' + envSlide * 100 + '%)';
+  for (let i = 0; i < envDots.length; i++) {
+    envDots[i].style.background = i === envSlide ? 'var(--primary)' : '#DDD';
+    envDots[i].style.width = i === envSlide ? '20px' : '8px';
+  }
+}
+let envTouchX = 0;
+envTrack.addEventListener('touchstart', function(e) { envTouchX = e.touches[0].clientX; });
+envTrack.addEventListener('touchend', function(e) {
+  let diff = envTouchX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) { moveEnv(diff > 0 ? 1 : -1); }
+});
+setInterval(function() { moveEnv(1); }, 5000);
+</script>
+
+<!-- ======================== 活动剪影轮播 ======================== -->
+<section class="section" style="padding-top:0;">
+  <div class="section-title">
+    <div class="icon" style="background:#FFF3E0;">📸</div>
+    <span>活动剪影</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="carousel" style="position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:4px;">
+    <!-- 轮播图容器 -->
+    <div class="carousel-track" id="carouselTrack" style="display:flex;transition:transform .5s ease;touch-action:pan-y;">
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity1.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity2.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity3.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity4.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity5.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity6.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity7.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity8.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+    </div>
+
+    <!-- 左右箭头 -->
+    <button onclick="moveSlide(-1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:none;background:rgba(255,255,255,.85);color:var(--text);font-size:16px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.1);z-index:2;display:flex;align-items:center;justify-content:center;">‹</button>
+    <button onclick="moveSlide(1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:none;background:rgba(255,255,255,.85);color:var(--text);font-size:16px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.1);z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
+
+    <!-- 底部圆点指示器 -->
+    <div style="display:flex;justify-content:center;gap:6px;padding:10px 0;" id="carouselDots">
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--primary);transition:all .3s;"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#DDD;transition:all .3s;"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#DDD;transition:all .3s;"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#DDD;transition:all .3s;"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#DDD;transition:all .3s;"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#DDD;transition:all .3s;"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#DDD;transition:all .3s;"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#DDD;transition:all .3s;"></span>
+    </div>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-light);text-align:center;margin-top:4px;">
+  </p>
+</section>
+
+<!-- 轮播图脚本 -->
+
+<!-- 轮播图脚本 -->
+<script>
+let currentSlide = 0;
+const totalSlides = 8;
+const track = document.getElementById('carouselTrack');
+const dots = document.getElementById('carouselDots').children;
+
+function moveSlide(dir) {
+  currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+  track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  updateDots();
+}
+
+function updateDots() {
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].style.background = i === currentSlide ? 'var(--primary)' : '#DDD';
+    dots[i].style.width = i === currentSlide ? '20px' : '8px';
+  }
+}
+
+// 触摸滑动支持
+let touchStartX = 0;
+track.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; });
+track.addEventListener('touchend', function(e) {
+  let diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) { moveSlide(diff > 0 ? 1 : -1); }
+});
+
+// 自动轮播（6秒切换）
+setInterval(function() { moveSlide(1); }, 6000);
+</script>
+
+<!-- ======================== 办园理念 ======================== -->
+<section class="section" style="padding-top:0;">
+  <div class="section-title">
+    <div class="icon" style="background:#E8F8FF;">💡</div>
+    <span>办园理念</span>
+    <div class="line"></div>
+  </div>
+
+  <!-- 园所简介 -->
+  <div class="card" style="margin-bottom:14px;padding:18px 16px;line-height:1.9;font-size:14px;color:var(--text-light);">
+    <p style="margin-bottom:8px;">邓州市城区五小幼儿园是一所<strong style="color:var(--text);">公办性质的市级示范性幼儿园</strong>，位于明建路城区五小院内。</p>
+    <p>我园自创立以来，一直秉承<strong style="color:var(--primary);">「强基·乐学·慧思」</strong>的教学理念，致力于培养全面发展的幼儿。几十年始终不断地探索教育本质，用心做教育，注重幼儿养成教育等方面的培养，多年来凭借优质的师资力量和优秀的教育成果获得社会各界的一致好评。</p>
+  </div>
+
+  <!-- 三大理念卡片 -->
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div class="card" style="padding:18px 16px;background:linear-gradient(135deg,#FFF5F9,#FFE8F5);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <div style="width:40px;height:40px;background:var(--primary);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🌱</div>
+        <div style="font-size:17px;font-weight:800;color:var(--primary);">强基</div>
+      </div>
+      <div style="font-size:13px;color:var(--text-light);line-height:1.8;">强调基础教育的重要性，注重幼儿的基础知识学习和基本技能的掌握，通过系统的课程设置和丰富的教学活动，帮助幼儿<strong style="color:var(--text);">打下坚实的学习基础</strong>。</div>
+    </div>
+
+    <div class="card" style="padding:18px 16px;background:linear-gradient(135deg,#F5FFF8,#E8FFE8);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <div style="width:40px;height:40px;background:#5EC89A;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🎈</div>
+        <div style="font-size:17px;font-weight:800;color:#5EC89A;">乐学</div>
+      </div>
+      <div style="font-size:13px;color:var(--text-light);line-height:1.8;">倡导快乐学习，注重激发幼儿的学习兴趣，通过<strong style="color:var(--text);">游戏化的教学方式</strong>和多样化的学习材料，让幼儿在轻松愉快的氛围中学习，培养学习积极性和自主学习能力。</div>
+    </div>
+
+    <div class="card" style="padding:18px 16px;background:linear-gradient(135deg,#F0F8FF,#E8F3FF);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <div style="width:40px;height:40px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">💡</div>
+        <div style="font-size:17px;font-weight:800;color:var(--accent);">慧思</div>
+      </div>
+      <div style="font-size:13px;color:var(--text-light);line-height:1.8;">强调智慧思考，注重培养幼儿的思维能力和创造力，通过引导幼儿进行<strong style="color:var(--text);">探索性学习和问题解决</strong>，激发思维活力，培养创新思维和解决问题的能力。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 师资介绍 ======================== -->
+<section class="section" style="padding-top:0;">
+  <div class="section-title">
+    <div class="icon" style="background:#FFF8E8;">👩‍🏫</div>
+    <span>师资团队</span>
+    <div class="line"></div>
+  </div>
+  <div class="card">
+    <div class="teacher-row">
+      <div class="teacher-avatar" style="background:linear-gradient(135deg,#FFE8F5,#FFD0E8);">👩‍🏫</div>
+      <div class="teacher-info">
+        <div class="name">唐玲 园长</div>
+        <div class="desc">从事幼儿教育7年，省级骨干教师，持幼儿园园长资质证书、幼儿教师资质证书和心理咨询师证书，曾获市级优秀教师称号</div>
+      </div>
+    </div>
+    <div class="teacher-row">
+      <div class="teacher-avatar" style="background:linear-gradient(135deg,#E8F8FF,#D0EEFF);">👩‍🏫</div>
+      <div class="teacher-info">
+        <div class="name">刘飒（飒飒老师）</div>
+        <div class="desc">学前教育本科毕业，从业4年，持有幼儿教师资格证书，擅长美术创作和绘本阅读</div>
+      </div>
+    </div>
+    <div class="teacher-row">
+      <div class="teacher-avatar" style="background:linear-gradient(135deg,#F5FFE8,#E8FFD0);">🍎</div>
+      <div class="teacher-info">
+        <div class="name">房桂连（苹果老师）</div>
+        <div class="desc">学前教育专科，从业8年，持有幼儿教师资格证，擅长幼儿绘本与幼儿游戏开展</div>
+      </div>
+    </div>
+    <div class="teacher-row">
+      <div class="teacher-avatar" style="background:linear-gradient(135deg,#FFF5E8,#FFE8D0);">💃</div>
+      <div class="teacher-info">
+        <div class="name">姚宁（姚姚老师）</div>
+        <div class="desc">学前教育毕业，从业7年，持有保育师证，擅长舞蹈编制与阅读识字</div>
+      </div>
+    </div>
+    <div class="teacher-row">
+      <div class="teacher-avatar" style="background:linear-gradient(135deg,#FFF0F0,#FFD0D0);">🎵</div>
+      <div class="teacher-info">
+        <div class="name">刘蓉（蓉蓉老师）</div>
+        <div class="desc">学前教育毕业，从业7年，持有幼儿教师资格证，擅长音乐律动及阅读识字</div>
+      </div>
+    </div>
+    <div class="teacher-row">
+      <div class="teacher-avatar" style="background:linear-gradient(135deg,#F0FFF0,#D0FFD0);">🌻</div>
+      <div class="teacher-info">
+        <div class="name">盛欢（盛老师）</div>
+        <div class="desc">学前教育专业，从教15年，耐心细心有责任心，熟悉儿童日常教学，善于呵护引导幼儿成长</div>
+      </div>
+    </div>
+    <div class="teacher-row">
+      <div class="teacher-avatar" style="background:linear-gradient(135deg,#F0F0FF,#D0D0FF);">🌸</div>
+      <div class="teacher-info">
+        <div class="name">李吴丹（丹丹老师）</div>
+        <div class="desc">学前教育专业，从业15年，持有幼儿教师资格证，热爱教育工作，具有良好的教师职业操守，有较强的责任心、爱心及耐心</div>
+      </div>
+    </div>
+    <div class="teacher-row">
+      <div class="teacher-avatar" style="background:linear-gradient(135deg,#FFF5F0,#FFE0D0);">🎨</div>
+      <div class="teacher-info">
+        <div class="name">程宛铭（铭铭老师）</div>
+        <div class="desc">艺术教育专业，擅长音乐、舞蹈，带领孩子感受艺术之美，激发创造力</div>
+      </div>
+    </div>
+    <div class="teacher-row">
+      <div class="teacher-avatar" style="background:linear-gradient(135deg,#F5F0FF,#E0D0FF);">⭐</div>
+      <div class="teacher-info">
+        <div class="name">许艳（艳子老师）</div>
+        <div class="desc">学前教育专业，从业5年，持有幼儿教师资格证，有较强的责任心、爱心，能吃苦耐劳，擅长和小孩打交道，注重工作效率和团队合作</div>
+      </div>
+    </div>
+  </div>
+  <div style="background:#FFF5F9;border-radius:12px;padding:12px 16px;margin-top:12px;font-size:13px;color:var(--text-light);">
+    ✅ 全园教师100%持证上岗 &nbsp;|&nbsp; ✅ 每年定期参加专业培训
+  </div>
+</section>
+
+<!-- ======================== 招生信息 ======================== -->
+<section class="section" style="padding-top:0;">
+  <div class="section-title">
+    <div class="icon" style="background:#F5FFE8;">📋</div>
+    <span>招生信息</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="enroll-info-grid">
+    <div class="info-card" style="background:linear-gradient(135deg,#FFF5F9,#FFE8F5);">
+      <div class="i-label" style="color:var(--primary);">📅 招生时间</div>
+      <div class="i-value">即日起报名</div>
+      <div class="i-sub">名额有限，先报先得</div>
+    </div>
+    <div class="info-card" style="background:linear-gradient(135deg,#F0F8FF,#E8F3FF);">
+      <div class="i-label" style="color:var(--accent);">👶 招生年龄</div>
+      <div class="i-value">2.5 - 6 岁</div>
+      <div class="i-sub">2020年9月1日<br>至2024年3月1日出生</div>
+    </div>
+    <div class="info-card" style="background:linear-gradient(135deg,#F5FFE8,#E8FFD0);">
+      <div class="i-label" style="color:#5EC89A;">🎒 开学时间</div>
+      <div class="i-value">2026年9月1日</div>
+      <div class="i-sub">新生入园适应期<br>9月1日 - 9月7日</div>
+    </div>
+    <div class="info-card" style="background:linear-gradient(135deg,#FFF8E8,#FFF0D0);">
+      <div class="i-label" style="color:var(--secondary);">🏠 在园时间</div>
+      <div class="i-value">全日制</div>
+      <div class="i-sub">7:40 - 17:10<br>支持延时服务至18:00</div>
+    </div>
+  </div>
+
+  <!-- 班级表格 -->
+  <div class="card" style="overflow:hidden;margin-top:4px;">
+    <table class="class-table">
+      <thead>
+        <tr>
+          <th>班级</th>
+          <th>适龄</th>
+          <th>招生人数</th>
+          <th>余位</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🌸 小班</td>
+          <td>3-4岁</td>
+          <td>30人</td>
+          <td style="color:var(--primary);font-weight:700;">20名</td>
+        </tr>
+        <tr>
+          <td>🌻 中班</td>
+          <td>4-5岁</td>
+          <td>30人</td>
+          <td style="color:var(--primary);font-weight:700;">20名</td>
+        </tr>
+        <tr>
+          <td>🌟 大班</td>
+          <td>5-6岁</td>
+          <td>30人</td>
+          <td style="color:var(--primary);font-weight:700;">20名</td>
+        </tr>
+        <tr>
+          <td>🎓 学前班</td>
+          <td>6-7岁</td>
+          <td>60人</td>
+          <td style="color:#5EC89A;font-weight:700;">40名</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 报名材料 -->
+  <div style="background:#FFFAF3;border:2px dashed var(--secondary);border-radius:14px;padding:14px 16px;margin-top:12px;">
+    <div style="font-size:14px;font-weight:700;margin-bottom:8px;color:var(--text);">📌 报名所需材料</div>
+    <div style="font-size:13px;color:var(--text-light);line-height:2;">
+      ① 幼儿户口本（复印件1份）<br>
+      ② 家长户口本首页及家长页（复印件1份）<br>
+      ③ 幼儿健康体检报告（入园前）<br>
+      ④ 疫苗接种记录本（复印件）
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 联系我们 ======================== -->
+<section class="section" style="padding-top:0;">
+  <div class="section-title">
+    <div class="icon" style="background:#E8F8FF;">📞</div>
+    <span>联系我们</span>
+    <div class="line"></div>
+  </div>
+  <div class="card">
+    <div class="contact-list">
+      <div class="contact-item">
+        <div class="contact-icon" style="background:#FFE8F5;">📞</div>
+        <div class="contact-text">
+          <div class="ct-label">招生热线</div>
+          <div class="ct-value">186-2560-7063</div>
+          <div class="ct-sub">工作日 8:00-18:00</div>
+        </div>
+        <a href="tel:18625607063">
+          <button class="btn-call">立即拨打</button>
+        </a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon" style="background:#FFF8E8;">📍</div>
+        <div class="contact-text">
+          <div class="ct-label">园所地址</div>
+          <div class="ct-value">邓州市城区五小幼儿园</div>
+          <div class="ct-sub">点击下方按钮一键导航</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon" style="background:#E8F0FF;">🕐</div>
+        <div class="contact-text">
+          <div class="ct-label">参观预约</div>
+          <div class="ct-value">周一至周五 9:00-16:00</div>
+          <div class="ct-sub">欢迎带孩子实地参观体验</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 地图导航模块 -->
+  <div style="padding:14px 16px;border-top:1px solid #f5f0eb;">
+    <div style="display:flex;gap:10px;">
+      <a href="https://uri.amap.com/search?keyword=邓州市城区五小" target="_blank"
+         style="width:100%;display:flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,#1678FF,#0E5FCC);color:#fff;padding:12px 0;border-radius:12px;font-size:14px;font-weight:700;">
+        🗺️ 一键导航
+      </a>
+    </div>
+    <div style="font-size:12px;color:var(--text-light);text-align:center;margin-top:10px;line-height:1.6;">
+      💡 点击按钮即可跳转地图App一键导航<br>
+      <span style="color:var(--primary);font-weight:600;">（自动搜索园所位置，无需手动配置）</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 在线报名 ======================== -->
+<section class="enroll-section" id="enroll-section">
+  <div class="section-title">
+    <div class="icon" style="background:#FFE8F5;">✏️</div>
+    <span>在线报名</span>
+    <div class="line"></div>
+  </div>
+  <div class="enroll-card">
+    <div class="e-title">🎊 立即报名，锁定名额！</div>
+    <div class="e-sub">
+      填写以下信息，我们会在24小时内<br>
+      与您联系确认入园事宜 ✨
+    </div>
+    <!--
+      ===== 报名方式说明 =====
+
+      【方案A】腾讯问卷（推荐）
+      1. 前往 https://wj.qq.com 登录
+      2. 新建问卷，添加字段：幼儿姓名、性别、出生年月、家长电话、留言
+      3. 发布后复制问卷链接，替换下方 href 即可
+
+      【方案B】金数据
+      1. 前往 https://jinshuju.net 注册
+      2. 创建表单，免费版支持100条/月
+
+      【方案C】飞书多维表格（无限量免费）
+      1. 前往 https://www.feishu.cn 注册
+      2. 创建多维表格 → 共享填写链接
+
+      替换下方 href 中的链接地址即可。
+    -->
+    <a href="https://wj.qq.com/s2/26799939/e50d/" target="_blank">
+      <button class="btn-enroll">📝 点击填写报名表</button>
+    </a>
+    <div class="e-tips">
+      🔒 信息保密，仅用于入园联系<br>
+      📱 微信内直接打开，无需下载App
+    </div>
+  </div>
+
+</section>
+
+<!-- ======================== 底部 ======================== -->
+<footer class="footer">
+  <div class="f-icons">🌞🎨🌱🎒💛</div>
+  <div><strong>邓州市城区五小幼儿园</strong></div>
+  <div>招生热线：186-2560-7063</div>
+  <div style="margin-top:10px;font-size:12px;opacity:.6;">
+    © 2026 邓州市城区五小幼儿园 · 让爱与阳光陪伴成长
+  </div>
+</footer>
+
+<!-- 返回顶部 -->
+<div class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<script>
+  // 返回顶部按钮显示/隐藏
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    backTop.classList.toggle('show', window.scrollY > 300);
+  });
+
+  // 平滑滚动到报名区
+  document.querySelector('.enroll-badge').addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('enroll-section').scrollIntoView({behavior:'smooth'});
+  });
+</script>
+</body>
+</html>
