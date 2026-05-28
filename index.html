@@ -318,6 +318,11 @@
     }
     .btn-enroll:active { transform: scale(.96); box-shadow: 0 2px 8px rgba(0,0,0,.1); }
 
+    @keyframes bounce {
+      0%,100%{ transform:translateY(0); }
+      50%{ transform:translateY(-8px); }
+    }
+
     /* ==================== 底部 ==================== */
     .footer {
       background: linear-gradient(135deg,#4A3728,#6B4A3A);
@@ -462,14 +467,14 @@ setInterval(function() { moveEnv(1); }, 5000);
   <div class="carousel" style="position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:4px;">
     <!-- 轮播图容器 -->
     <div class="carousel-track" id="carouselTrack" style="display:flex;transition:transform .5s ease;touch-action:pan-y;">
-      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity1.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity2.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity3.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity4.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity5.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity6.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity7.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity8.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity1.jpg" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#FFF3E0,#FFE0C0);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>📸</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>活动剪影</div></div>'"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity2.jpg" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#E8F8FF,#D0EEFF);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>📸</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>活动剪影</div></div>'"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity3.jpg" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#F5FFE8,#E8FFD0);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>📸</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>活动剪影</div></div>'"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity4.jpg" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#FFF5F9,#FFE8F5);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>📸</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>活动剪影</div></div>'"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity5.jpg" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#F0F8FF,#E8F3FF);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>📸</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>活动剪影</div></div>'"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity6.jpg" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#FFF8FF,#F5E8FF);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>📸</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>活动剪影</div></div>'"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity7.jpg" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#FFF0F0,#FFD0D0);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>📸</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>活动剪影</div></div>'"></div>
+      <div class="carousel-slide" style="flex:0 0 100%;position:relative;aspect-ratio:16/10;"><img src="images/activity8.jpg" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=width:100%;height:100%;background:linear-gradient(135deg,#F5FFF5,#E0FFE0);display:flex;align-items:center;justify-content:center;flex-direction:column;><div style=font-size:48px;>📸</div><div style=font-size:14px;color:#7A6A5A;margin-top:8px;>活动剪影</div></div>'"></div>
     </div>
 
     <!-- 左右箭头 -->
@@ -783,7 +788,11 @@ setInterval(function() { moveSlide(1); }, 6000);
 </section>
 
 <!-- ======================== 在线报名 ======================== -->
-<section class="enroll-section" id="enroll-section">
+<section class="enroll-section" id="enroll-section" style="padding-top:0;">
+  <div style="text-align:center;padding:20px 0 16px;">
+    <div style="font-size:32px;animation:bounce 1.5s ease-in-out infinite;">👇</div>
+    <div style="font-size:13px;color:var(--text-light);margin-top:4px;">名额有限，抓紧报名哦~</div>
+  </div>
   <div class="section-title">
     <div class="icon" style="background:#FFE8F5;">✏️</div>
     <span>在线报名</span>
@@ -813,9 +822,7 @@ setInterval(function() { moveSlide(1); }, 6000);
 
       替换下方 href 中的链接地址即可。
     -->
-    <a href="https://wj.qq.com/s2/26799939/e50d/" target="_blank">
-      <button class="btn-enroll">📝 点击填写报名表</button>
-    </a>
+    <a href="https://wj.qq.com/s2/26799939/e50d/" target="_blank" class="btn-enroll" style="display:inline-block;">📝 点击填写报名表</a>
     <div class="e-tips">
       🔒 信息保密，仅用于入园联系<br>
       📱 微信内直接打开，无需下载App
@@ -830,7 +837,7 @@ setInterval(function() { moveSlide(1); }, 6000);
   <div><strong>邓州市城区五小幼儿园</strong></div>
   <div>招生热线：186-2560-7063</div>
   <div style="margin-top:10px;font-size:12px;opacity:.6;">
-    © 2026 邓州市城区五小幼儿园 · 让爱与阳光陪伴成长
+    © <span id="copyYear">2026</span> 邓州市城区五小幼儿园 · 让爱与阳光陪伴成长
   </div>
 </footer>
 
@@ -838,6 +845,9 @@ setInterval(function() { moveSlide(1); }, 6000);
 <div class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
 
 <script>
+  // 自动更新版权年份
+  document.getElementById('copyYear').textContent = new Date().getFullYear();
+
   // 返回顶部按钮显示/隐藏
   const backTop = document.getElementById('backTop');
   window.addEventListener('scroll', () => {
